@@ -215,6 +215,7 @@ extension UKCard {
     static func backgroundEffectView(_ view: UIVisualEffectView, model: Model) {
       view.setBackgroundStyle(
         model.backgroundStyle,
+        liquidGlassStyle: .regular,
         backgroundColor: model.backgroundColor?.uiColor,
         borderColor: model.borderColor.uiColor,
         borderWidth: model.borderWidth.value,

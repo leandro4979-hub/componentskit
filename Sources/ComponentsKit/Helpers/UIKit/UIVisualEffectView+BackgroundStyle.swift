@@ -3,6 +3,7 @@ import UIKit
 extension UIVisualEffectView {
   func setBackgroundStyle(
     _ backgroundStyle: BackgroundStyle,
+    liquidGlassStyle: LiquidGlassStyle,
     backgroundColor: UIColor?,
     borderColor: UIColor?,
     borderWidth: CGFloat,
@@ -24,7 +25,7 @@ extension UIVisualEffectView {
       self.backgroundColor = backgroundColor
     case .liquidGlass:
       if #available(iOS 26.0, *) {
-        let effect = UIGlassEffect(style: .clear)
+        let effect = UIGlassEffect(style: liquidGlassStyle.uiGlassEffectStyle)
         effect.tintColor = backgroundColor
         effect.isInteractive = isGlassInteractive
         self.effect = effect

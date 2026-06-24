@@ -272,6 +272,7 @@ extension UKModalController {
     static func backgroundEffectView(_ view: UIVisualEffectView, model: VM) {
       view.setBackgroundStyle(
         model.backgroundStyle,
+        liquidGlassStyle: .regular,
         backgroundColor: model.preferredBackgroundColor?.uiColor,
         borderColor: UniversalColor.divider.uiColor,
         borderWidth: model.borderWidth.value,

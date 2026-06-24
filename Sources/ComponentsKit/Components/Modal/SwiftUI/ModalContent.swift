@@ -58,6 +58,7 @@ struct ModalContent<VM: ModalVM, Header: View, Body: View, Footer: View>: View {
     .componentBackground(
       shape: RoundedRectangle(cornerRadius: model.cornerRadius.value),
       backgroundStyle: self.model.backgroundStyle,
+      liquidGlassStyle: .regular,
       backgroundColor: self.model.preferredBackgroundColor?.color,
       borderColor: UniversalColor.divider.color,
       borderWidth: self.model.borderWidth.value

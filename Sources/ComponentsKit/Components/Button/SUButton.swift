@@ -43,6 +43,7 @@ public struct SUButton: View {
       .componentBackground(
         shape: RoundedRectangle(cornerRadius: self.model.cornerRadius.value()),
         backgroundStyle: self.model.backgroundStyle,
+        liquidGlassStyle: .clear,
         backgroundColor: self.model.backgroundColor?.color,
         borderColor: self.model.borderColor?.color ?? .clear,
         borderWidth: self.model.borderWidth,
