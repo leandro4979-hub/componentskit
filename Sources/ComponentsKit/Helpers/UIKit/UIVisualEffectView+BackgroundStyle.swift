@@ -24,7 +24,7 @@ extension UIVisualEffectView {
       self.backgroundColor = backgroundColor
     case .liquidGlass:
       if #available(iOS 26.0, *) {
-        let effect = UIGlassEffect(style: .regular)
+        let effect = UIGlassEffect(style: .clear)
         effect.tintColor = backgroundColor
         effect.isInteractive = isGlassInteractive
         self.effect = effect

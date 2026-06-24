@@ -36,7 +36,7 @@ extension View {
             shape.strokeBorder(borderColor, lineWidth: borderWidth)
           }
           .glassEffect(
-            .regular
+            .clear
               .tint(backgroundColor)
               .interactive(isGlassInteractive),
             in: shape
