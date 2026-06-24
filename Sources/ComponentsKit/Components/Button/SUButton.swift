@@ -43,6 +43,7 @@ public struct SUButton: View {
       .componentBackground(
         shape: RoundedRectangle(cornerRadius: self.model.cornerRadius.value()),
         backgroundStyle: self.model.backgroundStyle,
+        liquidGlassStyle: .clear,
         backgroundColor: self.model.backgroundColor?.color,
         borderColor: self.model.borderColor?.color ?? .clear,
         borderWidth: self.model.borderWidth,
@@ -76,23 +77,23 @@ public struct SUButton: View {
     case (false, let image?, _) where self.model.title.isEmpty:
       ButtonImage(
         image: image,
-        tintColor: self.model.foregroundColor,
-        side: self.model.imageSide
+        tintColor: self.model.foregroundColor
       )
+      .frame(width: self.model.imageSide, height: self.model.imageSide)
     case (false, let image?, .leading):
       ButtonImage(
         image: image,
-        tintColor: self.model.foregroundColor,
-        side: self.model.imageSide
+        tintColor: self.model.foregroundColor
       )
+      .frame(width: self.model.imageSide, height: self.model.imageSide)
       Text(self.model.title)
     case (false, let image?, .trailing):
       Text(self.model.title)
       ButtonImage(
         image: image,
-        tintColor: self.model.foregroundColor,
-        side: self.model.imageSide
+        tintColor: self.model.foregroundColor
       )
+      .frame(width: self.model.imageSide, height: self.model.imageSide)
     case (false, _, _):
       Text(self.model.title)
     }
@@ -101,27 +102,30 @@ public struct SUButton: View {
 
 // MARK: - Helpers
 
-private struct ButtonImage: View {
-  let universalImage: UniversalImage
-  let tintColor: UniversalColor
-  let side: CGFloat
-
-  init(
-    image: UniversalImage,
-    tintColor: UniversalColor,
-    side: CGFloat
-  ) {
-    self.universalImage = image
-    self.tintColor = tintColor
-    self.side = side
+private struct ButtonImage: UIViewRepresentable {
+  // SwiftUI Image with .resizable().scaledToFit() positions button images differently.
+  // Keep this UIImageView bridge aligned with UIKit button image layout.
+  class InternalImageView: UIImageView {
+    override var intrinsicContentSize: CGSize {
+      return .zero
+    }
   }
 
-  var body: some View {
-    self.universalImage.image
-      .resizable()
-      .scaledToFit()
-      .tint(self.tintColor.color)
-      .frame(width: self.side, height: self.side)
+  let image: UniversalImage
+  let tintColor: UniversalColor
+
+  func makeUIView(context: Context) -> UIImageView {
+    let imageView = InternalImageView()
+    imageView.image = self.image.uiImage
+    imageView.tintColor = self.tintColor.uiColor
+    imageView.contentMode = .scaleAspectFit
+    imageView.isUserInteractionEnabled = true
+    return imageView
+  }
+
+  func updateUIView(_ imageView: UIImageView, context: Context) {
+    imageView.image = self.image.uiImage
+    imageView.tintColor = self.tintColor.uiColor
   }
 }
 

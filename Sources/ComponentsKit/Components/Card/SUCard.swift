@@ -50,6 +50,7 @@ public struct SUCard<Content: View>: View {
       .componentBackground(
         shape: RoundedRectangle(cornerRadius: self.model.cornerRadius.value),
         backgroundStyle: self.model.backgroundStyle,
+        liquidGlassStyle: .regular,
         backgroundColor: self.model.backgroundColor?.color,
         borderColor: self.model.borderColor.color,
         borderWidth: self.model.borderWidth.value,

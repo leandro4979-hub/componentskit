@@ -247,6 +247,7 @@ extension UKButton {
     static func backgroundEffectView(_ view: UIVisualEffectView, model: Model) {
       view.setBackgroundStyle(
         model.backgroundStyle,
+        liquidGlassStyle: .clear,
         backgroundColor: model.backgroundColor?.uiColor,
         borderColor: model.borderColor?.uiColor,
         borderWidth: model.borderWidth,

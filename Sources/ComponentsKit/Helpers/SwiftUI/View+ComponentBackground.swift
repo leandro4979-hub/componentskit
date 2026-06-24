@@ -5,6 +5,7 @@ extension View {
   func componentBackground<BackgroundShape: InsettableShape>(
     shape: BackgroundShape,
     backgroundStyle: BackgroundStyle,
+    liquidGlassStyle: LiquidGlassStyle,
     backgroundColor: Color?,
     borderColor: Color,
     borderWidth: CGFloat,
@@ -36,7 +37,7 @@ extension View {
             shape.strokeBorder(borderColor, lineWidth: borderWidth)
           }
           .glassEffect(
-            .regular
+            liquidGlassStyle.glassStyle
               .tint(backgroundColor)
               .interactive(isGlassInteractive),
             in: shape
