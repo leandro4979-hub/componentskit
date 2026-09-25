@@ -10,29 +10,29 @@ A library with UIKit and SwiftUI components to build iOS apps faster.
 
 ## Available Components
 
-- [Alert](https://componentskit.io/docs/components/alert)  
-- [Avatar](https://componentskit.io/docs/components/avatar)  
-- [Avatar Group](https://componentskit.io/docs/components/avatar-group)  
-- [Badge](https://componentskit.io/docs/components/badge)  
-- [Button](https://componentskit.io/docs/components/button)  
-- [Card](https://componentskit.io/docs/components/card)  
-- [Checkbox](https://componentskit.io/docs/components/checkbox)  
-- [Circular Progress](https://componentskit.io/docs/components/circular-progress)  
-- [Countdown](https://componentskit.io/docs/components/countdown)  
-- [Divider](https://componentskit.io/docs/components/divider)  
-- [Input Field](https://componentskit.io/docs/components/input-field)  
-- [Loading](https://componentskit.io/docs/components/loading)  
-- [Modal (Bottom)](https://componentskit.io/docs/components/bottom-modal)  
-- [Modal (Center)](https://componentskit.io/docs/components/center-modal)  
-- [Progress Bar](https://componentskit.io/docs/components/progress-bar)  
-- [Radio Group](https://componentskit.io/docs/components/radio-group)  
-- [Segmented Control](https://componentskit.io/docs/components/segmented-control)  
-- [Slider](https://componentskit.io/docs/components/slider)  
-- [Text Input](https://componentskit.io/docs/components/text-input)
+- [Alert](https://componentskit.dev/docs/components/alert)  
+- [Avatar](https://componentskit.dev/docs/components/avatar)  
+- [Avatar Group](https://componentskit.dev/docs/components/avatar-group)  
+- [Badge](https://componentskit.dev/docs/components/badge)  
+- [Button](https://componentskit.dev/docs/components/button)  
+- [Card](https://componentskit.dev/docs/components/card)  
+- [Checkbox](https://componentskit.dev/docs/components/checkbox)  
+- [Circular Progress](https://componentskit.dev/docs/components/circular-progress)  
+- [Countdown](https://componentskit.dev/docs/components/countdown)  
+- [Divider](https://componentskit.dev/docs/components/divider)  
+- [Input Field](https://componentskit.dev/docs/components/input-field)  
+- [Loading](https://componentskit.dev/docs/components/loading)  
+- [Modal (Bottom)](https://componentskit.dev/docs/components/bottom-modal)  
+- [Modal (Center)](https://componentskit.dev/docs/components/center-modal)  
+- [Progress Bar](https://componentskit.dev/docs/components/progress-bar)  
+- [Radio Group](https://componentskit.dev/docs/components/radio-group)  
+- [Segmented Control](https://componentskit.dev/docs/components/segmented-control)  
+- [Slider](https://componentskit.dev/docs/components/slider)  
+- [Text Input](https://componentskit.dev/docs/components/text-input)
 
 ## Documentation
 
-Visit https://componentskit.io/docs to view the full documentation.
+Visit https://componentskit.dev/docs to view the full documentation.
 
 ## License
 
